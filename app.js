@@ -16,5 +16,5 @@ app.listen(PORT, () => {
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-const studentRouter = require('./routes/student-routes');
-app.use('/movies', moviesRouter)
+const studentsRouter = require('./routes/students-routes');
+app.use('/students', studentsRouter)
