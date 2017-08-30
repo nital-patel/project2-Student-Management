@@ -36,7 +36,7 @@ INSERT INTO student (id, student_name, email, gender, phone_number) VALUES
 'hiren',
 'heer@outlook.com',
 'male',
-7643685
+764368
 ),
 
 (
@@ -44,6 +44,6 @@ INSERT INTO student (id, student_name, email, gender, phone_number) VALUES
 'ketan',
 'kit@twitter.com',
 'male',
-7456675
+745667
 );
 

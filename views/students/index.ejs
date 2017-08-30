@@ -1,2 +1,14 @@
 <h1>Welcome to student management</h1>
-<button>LOG IN</button>
+
+<h1>All the movies</h1>
+
+<% students.forEach(student => { %>
+<div class="student">
+    <h4>
+        <a href="<%= `/students/${student.id}` %>">
+            <%= student.title %>
+        </a>
+    </h4>
+    <p><%= student.description %></p>
+</div>
+<% }) %>
