@@ -1,32 +1,49 @@
-INSERT INTO students (student_id, name, course, is_passing, comment) VALUES
-(1,
-'Jöhnny Ãpplesēēd',
-'WDI',
-'t',
-'Knows a little about apples.'
+INSERT INTO student (id, student_name, email, gender, phone_number) VALUES
+(
+1,
+'James',
+'james23@gmail.com',
+'male',
+7867435
 ),
 
 (
 2,
-'Dennis Ritchie',
-'UXI',
-'t',
-'Knows something about programming.'
+'nainesh',
+'nil@yahoo.com',
+'male',
+9875467
 ),
 
 (
 3,
-'Håkon Wium Lie',
-'UXI',
-'f',
-'Knows something about CSS.'
+'monika',
+'min23@gmail.com',
+'female',
+7853467
 ),
 
 (
 4,
-'Brendan Eich',
-'WDI',
-'t',
-'Knows something about JavaScript.'
+'nikita',
+'nik3@gmail.com',
+'female',
+9467836
+),
+
+(
+5,
+'hiren',
+'heer@outlook.com',
+'male',
+7643685
+),
+
+(
+6,
+'ketan',
+'kit@twitter.com',
+'male',
+7456675
 );
 

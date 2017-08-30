@@ -1,5 +1,10 @@
-CREATE TABLE IF NOT EXISTS students (
-  id BIGSERIAL PRIMARY KEY,
-  title VARCHAR(255),
-  description TEXT
+
+CREATE TABLE student
+(
+id serial,
+student_name VARCHAR(20),
+email VARCHAR(25),
+gender VARCHAR(10),
+phone_number VARCHAR(10),
+PRIMARY KEY(id)
 );
