@@ -17,4 +17,4 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 const studentsRouter = require('./routes/students-routes');
-app.use('/students', studentsRouter)
+app.use('/student', studentsRouter)

@@ -22,3 +22,5 @@ function setDatabase() {
 }
 
 const db = setDatabase();
+
+module.exprots =db;
