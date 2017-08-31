@@ -1,5 +1,8 @@
-<h1><%= student.title %></h1>
 
-<p><%= student.description %></p>
+<% include ../partials/boilerplate %>
 
-<a href="/movies">Back to student index</a>
+<a href="/student">Back to student index</a>
+<a href="<%= `/student/${student.id}/edit`%>">Edit student details</a>
+
+
+<% include ../partials/end %>

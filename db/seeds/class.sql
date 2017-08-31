@@ -1,3 +1,5 @@
+
+
 INSERT INTO class (id, name, instructor, start_date, end_date) VALUES
 (
 879,

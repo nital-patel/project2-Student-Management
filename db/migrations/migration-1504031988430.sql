@@ -1,5 +1,7 @@
 
-CREATE TABLE IF NOT EXISTS student
+DROP TABLE student;
+
+CREATE TABLE student
 (
 id serial,
 student_name VARCHAR(20),

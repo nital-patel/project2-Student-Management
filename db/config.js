@@ -7,10 +7,10 @@ const options = {
     },
 };
 
-const pgp = require('pg-promise') (options);
+const pgp = require('pg-promise')(options);
 
 function setDatabase() {
-    if (process.env.NODE_ENV === 'management' || !process.env.NODE_ENV) {
+    if (process.env.NODE_ENV === 'development' || !process.env.NODE_ENV) {
         return pgp({
             database: 'student_development',
             port: 5432,
@@ -23,4 +23,4 @@ function setDatabase() {
 
 const db = setDatabase();
 
-module.exprots =db;
+module.exports = db;

@@ -6,7 +6,7 @@ const path = require('path')
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-    res.send('Hello Student!');
+    res.render('index');
 });
 
 app.listen(PORT, () => {
@@ -18,3 +18,9 @@ app.set('views', path.join(__dirname, 'views'));
 
 const studentsRouter = require('./routes/students-routes');
 app.use('/student', studentsRouter)
+
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
