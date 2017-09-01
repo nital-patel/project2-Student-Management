@@ -33,3 +33,11 @@ app.use('/student', studentsRouter)
 
 
 
+app.get('/', (req, res) => {
+    res.render('index', { title: 'classes classes'});
+});
+
+const classesRouter = require('./routes/classes-routes');
+app.use('/data', classesRouter)
+
+

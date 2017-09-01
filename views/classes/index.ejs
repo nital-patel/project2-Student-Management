@@ -1,0 +1,25 @@
+<% include ../partials/boilerplate %>
+
+<% classes.forEach(data => { %>
+<div>
+
+    <h4>
+        <a href="<%= `/classes/${data.id}` %>">
+            <%= data.id %>
+        </a>
+        <br />
+        <%= data.name %>
+        <br />
+        <%= data.instructor %>
+        <br />
+        <%= data.start_date %>
+        <br />
+        <%= data.end_date %>
+        <br />
+
+    </h4>
+
+</div>
+<% }) %>
+
+<% include ../partials/end %>

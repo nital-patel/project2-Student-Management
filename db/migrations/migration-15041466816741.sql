@@ -1,5 +1,4 @@
-
-CREATE TABLE IF NOT EXISTS class
+CREATE TABLE IF NOT EXISTS data
 (
 id serial,
 name VARCHAR(20),
