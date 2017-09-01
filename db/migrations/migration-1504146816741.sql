@@ -1,4 +1,3 @@
-DROP TABLE class;
 
 CREATE TABLE IF NOT EXISTS class
 (

@@ -1,7 +1,8 @@
+<% include ../partials/boilerplate %>
 
 <h1>Edit a student</h1>
 
-<form action="<%= `student/${student.id}?_method=PUT` %>"
+<form method="POST" action="<%= `/student/${student.id}?_method=PUT` %>">
       <label for="id">ID</label>
       <input id="id" type="text" name="id" value="<%= student.id %>" />
 
@@ -33,4 +34,5 @@
 <a href="<%= `/student/${student.id}` %>">Cancel</a>
 
 
+<% include ../partials/end %>
 

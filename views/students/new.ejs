@@ -1,0 +1,35 @@
+<% include ../partials/boilerplate %>
+<h1>Create a student</h1>
+
+<form action="/student" method="POST">
+    <label for="id">ID</label>
+    <input id="id" type="text" name="id" value="<%= student.id %>" />
+
+    <br />
+
+    <label for="student_name">STUDENT_NAME</label>
+    <input id="student_name" type="text" name="student_name" value="<%= student.student_name %>" />
+
+    <br />
+
+    <label for="email">EMAIL</label>
+    <input id="email" type="text" name="email" value="<%= student.email %>" />
+
+    <br />
+
+    <label for="gender">GENDER</label>
+    <input id="gender" type="text" name="gender" value="<%= student.gender %>" />
+
+    <br />
+
+    <label for="phone_number">PHONE_NUMBER</label>
+    <input id="phone_number" type="text" name="phone_number" value="<%= student.phone_number %>" />
+
+    <br />
+
+    <input type="submit" value="Create the student list!" />
+</form>
+
+<a href="/student">Cancle</a>
+
+<% include ../partials/end %>
