@@ -13,10 +13,10 @@
 <%= student.phone_number%>
 <br />
 
-<a href="/student">Back to student index</a>
-<a href="<%= `/student/${student.id}/edit`%>">Edit student details</a>
+<a href="/students">Back to student index</a>
+<a href="<%= `/students/${student.id}/edit`%>">Edit student details</a>
 
-<form action="<%= `/student/${student.id}?_method=DELETE` %>" method="POST">
+<form action="<%= `/students/${student.id}?_method=DELETE` %>" method="POST">
     <input type="submit" value="Delete" />
 </form>
 

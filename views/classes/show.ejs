@@ -1,0 +1,15 @@
+<% include ../partials/boilerplate %>
+<%= classData.id %>
+<br />
+<%= classData.name %>
+<br />
+<%= classData.instructor %>
+<br />
+<%= classData.start_date %>
+<br />
+<%= classData.end_date %>
+<a href="/classes">Back to student index</a>
+
+
+<a href="<%= `/classes/${classData.id}/edit`%>">Edit student details</a>
+<% include ../partials/end %>

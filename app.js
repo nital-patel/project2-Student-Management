@@ -10,8 +10,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
-
-
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -26,18 +24,14 @@ app.get('/', (req, res) => {
     res.render('index', { title: 'student student'});
 });
 
-
-
 const studentsRouter = require('./routes/students-routes');
-app.use('/student', studentsRouter)
-
-
+app.use('/students', studentsRouter);
 
 app.get('/', (req, res) => {
     res.render('index', { title: 'classes classes'});
 });
 
 const classesRouter = require('./routes/classes-routes');
-app.use('/data', classesRouter)
+app.use('/classes', classesRouter);
 
 

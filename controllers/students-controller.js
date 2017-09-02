@@ -7,7 +7,7 @@ studentsController.index = (req,res) => {
     Student.findAll()
         .then(students => {
 
-            res.render('students/index', { students: students });
+            res.render('students/index', { students });
         })
         .catch(err => {
             res.status(500).json(err);
@@ -18,7 +18,7 @@ studentsController.index = (req,res) => {
 studentsController.show = (req, res) => {
     Student.findById(req.params.id)
         .then(student => {
-            res.render('students/show', { student: student })
+            res.render('students/show', { student })
         })
         .catch(err => {
             res.status(500).json(err);
@@ -28,7 +28,7 @@ studentsController.show = (req, res) => {
 studentsController.edit = (req, res) => {
     Student.findById(req.params.id)
         .then(student => {
-            res.render ('students/edit', { student: student })
+            res.render ('students/edit', { student })
         })
         .catch(err => {
             console.log(err);
@@ -37,8 +37,6 @@ studentsController.edit = (req, res) => {
 };
 
 studentsController.update = (req, res) => {
-
-    console.log("UPDATING THE RECORD");
 
     Student.update({
 
@@ -49,7 +47,7 @@ studentsController.update = (req, res) => {
         phone_number: req.body.phone_number
     }, req.params.id)
         .then(() => {
-            res.redirect(`/student/${req.params.id}`)
+            res.redirect(`/students/${req.params.id}`)
         })
         .catch(err => {
             res.status(500).json(err);
@@ -59,12 +57,9 @@ studentsController.update = (req, res) => {
 
 studentsController.new = (req, res) => {
     res.render('students/new')
-
 };
 
 studentsController.create = (req, res) => {
-
-    console.log('Create Student');
 
     Student.create({
         id: req.body.id,
@@ -74,25 +69,22 @@ studentsController.create = (req, res) => {
         phone_number: req.body.phone_number
     })
         .then(student => {
-        res.redirect(`/student/${student.id}`)
+        res.redirect(`/students/${student.id}`)
     })
         .catch(err => {
         res.status(500).json(err);
         });
 };
 
-
 studentsController.destroy = (req, res) => {
     Student.destroy(req.params.id)
         .then(() => {
-            res.redirect('/student')
+            res.redirect('/students')
         })
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
         });
 };
-
-
 
 module.exports = studentsController;

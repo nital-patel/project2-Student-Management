@@ -2,7 +2,7 @@
 
 <h1>Edit a student</h1>
 
-<form method="POST" action="<%= `/student/${student.id}?_method=PUT` %>">
+<form method="POST" action="<%= `/students/${student.id}?_method=PUT` %>">
       <label for="id">ID</label>
       <input id="id" type="text" name="id" value="<%= student.id %>" />
 
@@ -31,7 +31,7 @@
       <input type="submit" value="Save changes" />
 </form>
 
-<a href="<%= `/student/${student.id}` %>">Cancel</a>
+<a href="<%= `/students/${student.id}` %>">Cancel</a>
 
 
 <% include ../partials/end %>
