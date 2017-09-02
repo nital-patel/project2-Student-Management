@@ -1,0 +1,37 @@
+<% include ../partials/boilerplate %>
+
+<h1>Edit a classes</h1>
+
+<form action="/classes" method="POST">
+    <label for="id">ID</label>
+    <input id="id" type="text" name="id" value="<%= classData.id %>" />
+
+    <br />
+
+    <label for="name">NAME</label>
+    <input id="name" type="text" name="name" value="<%= classData.name %>" />
+
+    <br />
+
+    <label for="instructor">INSTRUCTOR</label>
+    <input id="instructor" type="text" name="instructor" value="<%= classData.instructor %>" />
+
+    <br />
+
+    <label for="start_date">START_DATE</label>
+    <input id="start_date" type="text" name="start_date" value="<%= classData.start_date %>" />
+
+    <br />
+
+    <label for="end_date">END_DATE</label>
+    <input id="end_date" type="text" name="end_date" value="<%= classData.end_date %>" />
+
+    <br />
+
+    <input type="submit" value="Save changes" />
+</form>
+
+<a href="/classes">Cancle</a>
+
+
+<% include ../partials/end %>

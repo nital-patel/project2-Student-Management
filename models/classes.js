@@ -9,4 +9,15 @@ const Classes = {
     }
 };
 
+Classes.create = (classes) => {
+    return db.one(`
+      INSERT INTO data
+        (name, instructor, start_date, end_date)
+      VALUES
+        ($1, $2, $3, $4, $5)
+      RETURNING *
+    `,
+        [data.name, data.instructor, data.start_date, data.end_date, id]
+    );
+};
 module.exports = Classes;
