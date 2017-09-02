@@ -6,6 +6,8 @@ classesRouter.get('/', classesController.index);
 classesRouter.get('/:id', classesController.show);
 classesRouter.get('/:id/edit', classesController.edit);
 classesRouter.get('/new', classesController.new);
+classesRouter.put('/:id', classesController.update);
 classesRouter.post('/', classesController.create);
+classesRouter.delete('/:id', classesController.destroy);
 
 module.exports = classesRouter;

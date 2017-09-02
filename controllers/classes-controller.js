@@ -45,6 +45,23 @@ classesController.new = (req, res) => {
     res.render('classes/new')
 };
 
+classesController.update = (req, res) => {
+    Classes.update({
+        id: req.body.id,
+        name: req.body.name,
+        instructor: req.body.instructor,
+        start_date: req.body.start_date,
+        end_date: req.body.end_date
+    }, req.params.id)
+        .then(() => {
+            res.redirect(`/classes/${req.params.id}`)
+        })
+        .catch(err => {
+            res.status(500).json(err);
+        });
+
+};
+
 classesController.create = (req, res) => {
 
     console.log('Create Classes');
@@ -60,6 +77,17 @@ classesController.create = (req, res) => {
             res.redirect(`/classes/${classData.id}`)
         })
         .catch(err => {
+            res.status(500).json(err);
+        });
+};
+
+classesController.destroy = (req, res) => {
+    Classes.destroy(req.params.id)
+        .then(() => {
+            res.redirect('/classes')
+        })
+        .catch(err => {
+            console.log(err);
             res.status(500).json(err);
         });
 };
