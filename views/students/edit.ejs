@@ -1,39 +1,36 @@
 <% include ../partials/boilerplate %>
-
 <h1>Edit a student</h1>
-<div class="studentedit">
 
-<form method="POST" action="<%= `/students/${student.id}?_method=PUT` %>">
-      <label for="id">ID</label>
-      <input id="id" type="text" name="id" value="<%= student.id %>" />
+<form class="editcard" method="POST" action="<%= `/students/${student.id}?_method=PUT` %>">
 
-      <br />
 
-      <label for="student_name">STUDENT_NAME</label>
-      <input id="student_name" type="text" name="student_name" value="<%= student.student_name %>" />
-
-      <br />
-
-      <label for="email">EMAIL</label>
-      <input id="email" type="text" name="email" value="<%= student.email %>" />
-
-      <br />
-
-      <label for="gender">GENDER</label>
-      <input id="gender" type="text" name="gender" value="<%= student.gender %>" />
-
-      <br />
-
-      <label for="phone_number">PHONE_NUMBER</label>
-      <input id="phone_number" type="text" name="phone_number" value="<%= student.phone_number %>" />
-
-      <br />
-
-      <input type="submit" value="Save changes" />
+            <span class="edit_form">
+                  <label for="id">ID</label>
+                  <span><%= student.id %></span>
+            </span>
+            <span class="edit_form">
+                  <label for="student_name">NAME</label>
+                  <input id="student_name" type="text" name="student_name" value="<%= student.student_name %>" />
+            </span>
+            <span class="edit_form">
+                  <label for="email">EMAIL</label>
+                  <input id="email" type="text" name="email" value="<%= student.email %>" />
+            </span>
+            <span class="edit_form">
+                  <label for="gender">GENDER</label>
+                  <input id="gender" type="text" name="gender" value="<%= student.gender %>" />
+            </span>
+            <span class="edit_form">
+                  <label for="phone_number">MO_NUMBER</label>
+                  <input id="phone_number" type="text" name="phone_number" value="<%= student.phone_number %>" />
+            </span>
+            <span class="btn">
+                  <button class="btn">save change</button>
+            </span>
+            <span class="edit_form">
+                <a class="link" href="<%= `/students/${student.id}` %>">Cancel</a>
+            </span>
 </form>
 
-<a href="<%= `/students/${student.id}` %>">Cancel</a>
-
-</div>
 <% include ../partials/end %>
 

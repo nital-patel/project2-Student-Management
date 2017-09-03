@@ -1,23 +1,22 @@
 
 <% include ../partials/boilerplate %>
-<div class="student">
-
-<%= student.id %>
-<br />
-    <div class="data">
+<div class="update">
+<span class="edit_form">
+<%=  student.id %>
+</span>
+    <span class="edit_form">
 <%= student.student_name %>
-<br />
+</span>
+    <span class="edit_form">
 <%= student.email %>
-<br />
-<%= student.gender %>
-<br />
+    </span>
+    <span class="edit_form">
 <%= student.phone_number%>
-<br />
-    </div>
-<a class="linkback"href="/students">Back</a>
-<a class="linkedit"href="<%= `/students/${student.id}/edit`%>">Edit</a>
+    </span>
+<a class="back"href="/students">Back</a>
+<a class="edit"href="<%= `/students/${student.id}/edit`%>">Edit</a>
 <form action="<%= `/students/${student.id}?_method=DELETE` %>" method="POST">
-    <a class="linkedit" href="/students">Delete</a>
+    <button class="btn">Delete</button>
 </form>
 </div>
 <% include ../partials/end %>

@@ -1,51 +1,44 @@
-INSERT INTO data (id, name, instructor, start_date, end_date) VALUES
+INSERT INTO data (name, instructor, start_date, end_date) VALUES
 (
-879,
 'Micro Economics',
 'Ajay Sir',
-10/21/2017,
-12/21/2017
+'2017-10-21',
+'2017-12-21'
 ),
 (
-110,
 'Bussiness Class',
 'Kamal mam',
-10/21/2017,
-12/21/2017
+'2017-10-21',
+'2017-12-21'
 ),
 (
-345,
 'Management Info',
 'Priya Mam',
-10/21/2017,
-12/21/2017
+'2017-10-21',
+'2017-12-21'
 ),
 (
-234,
 'Operation Research',
 'Vishal Sir',
-10/21/2017,
-12/21/2017
+'2017-10-21',
+'2017-12-21'
 ),
 (
-768,
 'Computer Science',
 'Lopa Mam',
-10/21/2017,
-12/21/2017
+'2017-10-21',
+'2017-12-21'
 ),
 (
-758,
 'Development',
 'Hiren Sir',
-10/21/2017,
-12/21/2017
+'2017-10-21',
+'2017-12-21'
 ),
 (
-657,
-'Stavan Sir',
 'Web Design',
-10/21/2017,
-12/21/2017
+'Stavan Sir',
+'2017-10-21',
+'2017-12-21'
 );
 

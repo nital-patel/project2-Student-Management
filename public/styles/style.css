@@ -1,36 +1,40 @@
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    align-items: stretch;
     min-height: 100vh;
-    font-size: 20px;
-    font-family: sans-serif;
-    background-image: url('https://wallpapersafari.com/light-blue-wallpaper-background');
     background-repeat: repeat;
-    background-color: #99E6D9;
-    background-blend-mode: screen;
-}
-h1 {
-
-    font-size: 3em;
-    font-weight: 900;
+    background-color: #2b303b;
+    margin: 0 auto;
+    display: block;
+    width: 1140px;
 }
 
 
-.student {
+.card {
     border: 5px solid white;
     width: 350px;
-    height: 350px
-    margin-top: 20px;
-    border-radius: 20px;
-}
-.data {
-    margin-top: 200px;
-    text-align: center;
-    color: darkblue;
-
+    border-radius: 5px;
+    background: #ffffff;
+    margin: 10px;
+    font-style: normal;
+    float: left;
 
 }
+.imgbackground {
+    width: 350px;
+    height: 200px;
+    background: #6bbcd4;
+}
+
+.contain {
+    display: inline-block;
+    color: black;
+    background: white;
+    width: 350px;
+    font-size: 20px;
+    color: #5499C7;
+}
+
 .name {
     color: #99E6D9;
 }
@@ -42,14 +46,77 @@ h1 {
     text-decoration: none;
 
 }
-.linkedit {
+
+.student_show {
+    border: 1px solid  white;
+}
+.edit_form {
+    display: block;
+    margin: 10px;
+    text-align: center;
+
+}
+
+.edit {
+    font-size: 24px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    background: #58D68D;
+    border-radius: 13px;
+    padding: 5px 24px;
+    color: #eeeeee;
+}
+
+.btn {
+    font-size: 24px;
+    border: 1px solid #ddd;
+    background: #EC7063;
+    border-radius: 13px;
+    padding: 7px 24px;
+    color: #eeeeee;
+    margin-top: 10px;
+
+}
+h1 {
+    color: cornflowerblue;
+    margin-left: 400px;
+    margin-top: 150px;
+}
+.editcard {
+    border-radius: 5px;
+    background: #ffffff;
+    font-style: normal;
+    text-align: center;
+    margin-top: 200px;
+    color: #5499C7;
+    font-size: 25px;
+    height: 300px;
+
+}
+.link {
+    font-size: 30px;
+    margin-top: 10px;
+    color: cornflowerblue;
+    text-decoration: none;
+
+}
+.update {
+    border-radius: 5px;
+    background: #ffffff;
+    font-style: normal;
+    text-align: center;
+    margin-top: 200px;
+    color: #5499C7;
+    font-size: 25px;
+    height: 300px;
+    margin-left: 600px;
+
+}
+.back {
+    float: right;
+    margin-left: 70px;
     font-size: 30px;
     text-decoration: none;
-}
-.studentedit {
-    width: 350px;
-    height: 350px;
-    border-radius: 20px;
-    border: 5px solid white;
-    text-align: center;
+    color: cornflowerblue;
+    margin-right: 50px;
 }

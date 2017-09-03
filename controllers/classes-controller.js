@@ -46,8 +46,9 @@ classesController.new = (req, res) => {
 };
 
 classesController.update = (req, res) => {
+
     Classes.update({
-        id: req.body.id,
+        id: req.params.id,
         name: req.body.name,
         instructor: req.body.instructor,
         start_date: req.body.start_date,
@@ -67,7 +68,6 @@ classesController.create = (req, res) => {
     console.log('Create Classes');
 
     Classes.create({
-        id: req.body.id,
         name: req.body.name,
         instructor: req.body.instructor,
         start_date: req.body.start_date,

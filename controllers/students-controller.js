@@ -40,7 +40,7 @@ studentsController.update = (req, res) => {
 
     Student.update({
 
-        id: req.body.id,
+        id: req.params.id,
         student_name: req.body.student_name,
         email: req.body.email,
         gender: req.body.gender,

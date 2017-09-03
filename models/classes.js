@@ -30,7 +30,7 @@ const Classes = {
         ($1, $2, $3, $4, $5)
       RETURNING *
     `,
-            [classData.name, classData.instructor, classData.start_date, classData.end_date, id]
+            [classData.name, classData.instructor, classData.start_date, classData.end_date]
         );
     },
 

@@ -1,18 +1,26 @@
 <% include ../partials/boilerplate %>
+<div class="update">
+<span class="edit_form">
 <%= classData.id %>
-<br />
+</span>
+    <span class="edit_form">
 <%= classData.name %>
-<br />
+    </span>
+    <span class="edit_form">
 <%= classData.instructor %>
-<br />
+    </span>
+    <span class="edit_form">
 <%= classData.start_date %>
-<br />
+    </span>
+    <span class="edit_form">
 <%= classData.end_date %>
-<a href="/classes">Back to student index</a>
+    </span>
+<a class="back"href="/classes">Back</a>
 
 
-<a href="<%= `/classes/${classData.id}/edit`%>">Edit student details</a>
+<a class="edit"href="<%= `/classes/${classData.id}/edit`%>">Edit</a>
 <form action="<%= `/classes/${classData.id}?_method=DELETE` %>" method="POST">
-    <input type="submit" value="Delete" />
+    <button class="btn">Delete</button>
 </form>
+</div>
 <% include ../partials/end %>

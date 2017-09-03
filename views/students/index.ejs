@@ -1,27 +1,24 @@
 <% include ../partials/boilerplate %>
 
 <% students.forEach(student => { %>
-<div class="student">
+<div class="card">
+    <div class="imgbackground">
+    </div>
+    <div class="contain">
+        <span class="edit_form"><%= student.student_name %></span>
+        <span class="edit_form"><%= student.email %></span>
+        <span class="edit_form"><%= student.phone_number %></span>
+        <span class="edit_form">
 
-    <h4>
-        <a href="<%= `/students/${student.id}` %>">
-            <%= student.id %>
-        </a>
-        <div class="data">
-        <br />
-            <%= student.student_name %>
-        <br />
-            <%= student.email %>
-        <br />
-            <%= student.gender %>
-        <br />
-            <%= student.phone_number %>
-        <br />
-        <a href="/students/new">Add a student!</a>
-        </div>
-    </h4>
+            <a  class="edit" href="<%= `/students/${student.id}/edit`%>">Edit</a>
+            <form action="<%= `/students/${student.id}?_method=DELETE` %>" method="POST">
+                <button class="btn">Delete</button>
+            </form>
+        </span>
+    </div>
 
 </div>
+
 <% }) %>
 
 <% include ../partials/end %>
