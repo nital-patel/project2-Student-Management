@@ -68,10 +68,11 @@ studentsController.create = (req, res) => {
         phone_number: req.body.phone_number
     })
         .then(student => {
-        res.redirect(`/students/${student.id}`)
-    })
+            res.redirect(`/students/${student.id}`)
+        })
         .catch(err => {
-        res.status(500).json(err);
+            console.log(err);
+            res.status(500).json(err);
         });
 };
 

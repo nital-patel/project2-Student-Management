@@ -22,12 +22,12 @@ const Classes = {
         );
     },
 
-    create(classes) {
+    create(classData) {
         return db.one(`
       INSERT INTO data
         (name, instructor, start_date, end_date)
       VALUES
-        ($1, $2, $3, $4, $5)
+        ($1, $2, $3, $4)
       RETURNING *
     `,
             [classData.name, classData.instructor, classData.start_date, classData.end_date]

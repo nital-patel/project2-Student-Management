@@ -1,35 +1,33 @@
 <% include ../partials/boilerplate %>
-<h1>Create a student</h1>
 
-<form class="update" action="/student" method="POST">
-    <label for="id">ID</label>
-    <input id="id" type="text" name="id" value="<%= student.id %>" />
 
-    <br />
+<form class="editcard" action="/students" method="POST">
+    <h1>Create a student</h1>
+    <div class="edit_form">
+        <label for="student_name">Name</label>
+        <input id="student_name" type="text" name="student_name" value="" />
+    </div>
+    <div class="edit_form">
+        <label for="email">Email</label>
+        <input id="email" type="text" name="email" value="" />
+    </div>
+    <div class="edit_form">
+        <label for="gender">Gender</label>
+        <input id="gender" type="text" name="gender" value="" />
+    </div>
+    <div class="edit_form">
+        <label for="phone_number">Mobile #</label>
+        <input id="phone_number" type="text" name="phone_number" value="" />
+    </div>
+    <div>
+        <button type="submit" class="btn">Save</button>
+    </div>
+    <div>
+        <a class="link" href="/students">Cancle</a>
+    </div>
 
-    <label for="student_name">STUDENT_NAME</label>
-    <input id="student_name" type="text" name="student_name" value="<%= student.student_name %>" />
-
-    <br />
-
-    <label for="email">EMAIL</label>
-    <input id="email" type="text" name="email" value="<%= student.email %>" />
-
-    <br />
-
-    <label for="gender">GENDER</label>
-    <input id="gender" type="text" name="gender" value="<%= student.gender %>" />
-
-    <br />
-
-    <label for="phone_number">PHONE_NUMBER</label>
-    <input id="phone_number" type="text" name="phone_number" value="<%= student.phone_number %>" />
-
-    <br />
-
-    <input type="submit" value="Create the student list!" />
 </form>
 
-<a href="/student">Cancle</a>
+
 
 <% include ../partials/end %>

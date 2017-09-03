@@ -27,10 +27,10 @@ const Student = {
       INSERT INTO student
         (student_name, email, gender, phone_number)
       VALUES 
-        ($1, $2, $3, $4, $5)
+        ($1, $2, $3, $4)
       RETURNING *
     `,
-            [student.student_name, student.email, student.gender, student.phone_number, id]
+            [student.student_name, student.email, student.gender, student.phone_number]
         );
     },
     destroy(id) {

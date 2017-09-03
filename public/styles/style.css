@@ -142,3 +142,11 @@ body {
     float: left;
     text-decoration: none;
 }
+.add {
+    color: #99E6D9;
+    font-size: 30px;
+    width: 50%;
+    text-align: center;
+    margin-left: 500px;
+    margin-top: 10px;
+}

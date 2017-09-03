@@ -1,37 +1,27 @@
 <% include ../partials/boilerplate %>
-
-<h1>Edit a classes</h1>
-
-<form action="/classes" method="POST">
-    <label for="id">ID</label>
-    <input id="id" type="text" name="id" value="<%= classData.id %>" />
-
-    <br />
-
-    <label for="name">NAME</label>
-    <input id="name" type="text" name="name" value="<%= classData.name %>" />
-
-    <br />
-
-    <label for="instructor">INSTRUCTOR</label>
-    <input id="instructor" type="text" name="instructor" value="<%= classData.instructor %>" />
-
-    <br />
-
-    <label for="start_date">START_DATE</label>
-    <input id="start_date" type="text" name="start_date" value="<%= classData.start_date %>" />
-
-    <br />
-
-    <label for="end_date">END_DATE</label>
-    <input id="end_date" type="text" name="end_date" value="<%= classData.end_date %>" />
-
-    <br />
-
-    <input type="submit" value="Save changes" />
+<form class="editcard" action="/classes" method="POST">
+    <h1>Create a classes</h1>
+    <div class="edit_form">
+    <label for="name">Name</label>
+    <input id="name" type="text" name="name" value="" />
+    </div>
+    <div class="edit_form">
+    <label for="instructor">Instructor</label>
+    <input id="instructor" type="text" name="instructor" value="" />
+    </div>
+    <div class="edit_form">
+    <label for="start_date">Start_date</label>
+    <input id="start_date" type="text" name="start_date" value="" />
+    </div>
+    <div class="edit_form">
+    <label for="end_date">End_date</label>
+    <input id="end_date" type="text" name="end_date" value="" />
+    </div>
+    <div>
+        <button type="submit" class="btn">Save</button>
+    </div>
+    <div>
+        <a class="link" href="/classData">Cancle</a>
+    </div>
 </form>
-
-<a href="/classes">Cancle</a>
-
-
 <% include ../partials/end %>

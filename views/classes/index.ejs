@@ -1,4 +1,7 @@
 <% include ../partials/boilerplate %>
+<div>
+    <a class="add" href="/classes/new">Add a classes!</a>
+</div>
 
 <% classes.forEach(data => { %>
 <div class="card">
@@ -6,15 +9,11 @@
         <div class="img"></div>
     </div>
     <div class="contain">
-
-
-
         <span class="edit_form"><%= data.name %></span>
         <span class="edit_form"><%= data.instructor %></span>
         <span class="edit_form"><%= data.start_date %></span>
         <span class="edit_form"><%= data.end_date %></span>
         <span class="edit_form">
-
         <a class="edit"href="<%= `/classes/${data.id}/edit`%>">Edit</a>
         <form action="<%= `/classes/${data.id}?_method=DELETE` %>" method="POST">
             <button class="btn">Delete</button>
