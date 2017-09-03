@@ -24,6 +24,16 @@ body {
     width: 350px;
     height: 200px;
     background: #6bbcd4;
+    display: inline-block;
+}
+.img {
+    border: 5px solid #ffffff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin: 40px auto;
 }
 
 .contain {
@@ -77,20 +87,16 @@ body {
     margin-top: 10px;
 
 }
-h1 {
-    color: cornflowerblue;
-    margin-left: 400px;
-    margin-top: 150px;
-}
+
 .editcard {
     border-radius: 5px;
     background: #ffffff;
     font-style: normal;
     text-align: center;
-    margin-top: 200px;
     color: #5499C7;
     font-size: 25px;
-    height: 300px;
+    margin: 0 auto;
+    width: 50%;
 
 }
 .link {
@@ -105,18 +111,34 @@ h1 {
     background: #ffffff;
     font-style: normal;
     text-align: center;
-    margin-top: 200px;
     color: #5499C7;
     font-size: 25px;
-    height: 300px;
-    margin-left: 600px;
 
 }
 .back {
-    float: right;
-    margin-left: 70px;
     font-size: 30px;
     text-decoration: none;
     color: cornflowerblue;
-    margin-right: 50px;
+}
+.edit_form label {
+    width: 25%;
+    display: inline-block;
+}
+.edit_form input {
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid #5499C7;
+    font-size: 24px;
+    color: #444;
+    border-radius: 2px;
+    width: 50%;
+    outline: none;
+}
+.actions {
+    display: inline-block;
+
+}
+.actions .btn {
+    float: left;
+    text-decoration: none;
 }

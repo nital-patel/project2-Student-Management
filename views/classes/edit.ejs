@@ -3,32 +3,32 @@
 <h1>Edit a classes</h1>
 
 <form class="editcard" method="POST" action="<%= `/classes/${classData.id}?_method=PUT` %>">
-    <span class="edit_form">
-    <label for="id">ID</label>
-    <span><%= classData.id %></span>
-    </span>
-    <span class="edit_form">
-    <label for="name">NAME</label>
-    <input id="name" type="text" name="name" value="<%= classData.name %>" />
-    </span>
-    <span class="edit_form">
-    <label for="instructor">INSTRUCTOR</label>
-    <input id="instructor" type="text" name="instructor" value="<%= classData.instructor %>" />
-    </span>
-    <span class="edit_form">
-    <label for="start_date">START_DATE</label>
-    <input id="start_date" type="text" name="start_date" value="<%= classData.start_date %>" />
-    </span>
-    <span class="edit_form">
-    <label for="end_date">END_DATE</label>
-    <input id="end_date" type="text" name="end_date" value="<%= classData.end_date %>" />
-    </span>
-    <span class="btn">
-    <input type="submit" value="Save changes" />
-    </span>
-    <span class="edit_form">
+    <div class="edit_form">
+        <label for="id">ID</label>
+        <span><%= classData.id %></span>
+    </div>
+    <div class="edit_form">
+        <label for="name">NAME</label>
+        <input id="name" type="text" name="name" value="<%= classData.name %>" />
+    </div>
+    <div class="edit_form">
+        <label for="instructor">INSTRUCTOR</label>
+        <input id="instructor" type="text" name="instructor" value="<%= classData.instructor %>" />
+    </div>
+    <div class="edit_form">
+        <label for="start_date">START_DATE</label>
+        <input id="start_date" type="text" name="start_date" value="<%= classData.start_date %>" />
+    </div>
+    <div class="edit_form">
+        <label for="end_date">END_DATE</label>
+        <input id="end_date" type="text" name="end_date" value="<%= classData.end_date %>" />
+    </div>
+    <div class="btn">
+        <input type="submit" value="Save changes" />
+    </div>
+    <div class="edit_form">
     <a href="<%= `/classes/${classData.id}` %>">Cancel</a>
-    </span>
+    </div>
 
 </form>
 <% include ../partials/end %>

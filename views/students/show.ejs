@@ -1,22 +1,21 @@
 
 <% include ../partials/boilerplate %>
-<div class="update">
-<span class="edit_form">
-<%=  student.id %>
-</span>
-    <span class="edit_form">
-<%= student.student_name %>
-</span>
-    <span class="edit_form">
-<%= student.email %>
-    </span>
-    <span class="edit_form">
-<%= student.phone_number%>
-    </span>
-<a class="back"href="/students">Back</a>
-<a class="edit"href="<%= `/students/${student.id}/edit`%>">Edit</a>
-<form action="<%= `/students/${student.id}?_method=DELETE` %>" method="POST">
-    <button class="btn">Delete</button>
-</form>
+<div class="editcard">
+    <div class="edit_form">
+        Student Id: <%=  student.id %>
+    </div>
+    <div class="edit_form">
+        Name: <%= student.student_name %>
+    </div>
+    <div class="edit_form">
+        Email: <%= student.email %>
+    </div>
+    <div class="edit_form">
+        Mobile #: <%= student.phone_number%>
+    </div>
+    <div class="actions">
+        <a class="btn"href="/students">Back to Students</a>
+    </div>
+
 </div>
 <% include ../partials/end %>

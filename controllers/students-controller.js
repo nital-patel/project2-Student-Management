@@ -62,7 +62,6 @@ studentsController.new = (req, res) => {
 studentsController.create = (req, res) => {
 
     Student.create({
-        id: req.body.id,
         student_name: req.body.student_name,
         email: req.body.email,
         gender: req.body.gender,
