@@ -1,6 +1,4 @@
-DROP TABLE data;
-
-CREATE TABLE IF NOT EXISTS data
+CREATE TABLE IF NOT EXISTS class
 (
 id serial,
 name VARCHAR(20),

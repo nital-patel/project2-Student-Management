@@ -5,7 +5,7 @@ INSERT INTO student (student_name, email, gender, phone_number, profile_image) V
 'male',
 7867435234
 ),
-s
+
 (
 'nainesh',
 'nil@yahoo.com',

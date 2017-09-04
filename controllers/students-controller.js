@@ -39,7 +39,6 @@ studentsController.edit = (req, res) => {
 studentsController.update = (req, res) => {
 
     Student.update({
-
         id: req.params.id,
         student_name: req.body.student_name,
         email: req.body.email,
@@ -60,13 +59,13 @@ studentsController.new = (req, res) => {
 };
 
 studentsController.create = (req, res) => {
-    console.log('Profile Image :' + req.body.profile_image);
     Student.create({
         profile_image: req.body.profile_image,
         student_name: req.body.student_name,
         email: req.body.email,
         gender: req.body.gender,
         phone_number: req.body.phone_number
+
     })
         .then(student => {
             res.redirect(`/students/${student.id}`)
