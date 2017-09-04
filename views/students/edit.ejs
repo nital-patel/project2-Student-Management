@@ -23,8 +23,19 @@
           <label  for="phone_number">Mobile #</label>
           <input id="phone_number" type="text" name="phone_number" value="<%= student.phone_number %>" />
     </div>
+
+    <fieldset>
+        <legend>Select Classes</legend>
+        <% classes.forEach(classData => { %>
+        <div>
+            <input type="checkbox" id="<%= "class-" + classData.id %>" name="classes" value="<%= classData.id %>">
+            <label for="<%= "class-" + classData.id %>"><%= classData.name %></label>
+        </div>
+        <% }) %>
+    </fieldset>
+
     <div>
-          <button class="btn">Save</button>
+        <button class="btn">Save</button>
     </div>
     <div class="edit_form">
         <a class="link" href="<%= `/students/${student.id}` %>">Cancel</a>

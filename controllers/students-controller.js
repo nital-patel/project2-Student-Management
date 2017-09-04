@@ -1,5 +1,6 @@
 
 const Student = require('../models/student');
+const Classes = require('../models/classes');
 
 const studentsController = {};
 
@@ -26,9 +27,17 @@ studentsController.show = (req, res) => {
 };
 
 studentsController.edit = (req, res) => {
-    Student.findById(req.params.id)
-        .then(student => {
-            res.render ('students/edit', { student })
+
+    Promise.all([
+        Student.findById(req.params.id),
+        Classes.findAll()
+    ])
+        .then(results => {
+            const classes = results[1];
+
+            const student = results[0];
+
+            res.render ('students/edit', { student, classes });
         })
         .catch(err => {
             console.log(err);
@@ -37,7 +46,7 @@ studentsController.edit = (req, res) => {
 };
 
 studentsController.update = (req, res) => {
-
+    console.dir(req.body);
     Student.update({
         id: req.params.id,
         student_name: req.body.student_name,
@@ -65,7 +74,6 @@ studentsController.create = (req, res) => {
         email: req.body.email,
         gender: req.body.gender,
         phone_number: req.body.phone_number
-
     })
         .then(student => {
             res.redirect(`/students/${student.id}`)
