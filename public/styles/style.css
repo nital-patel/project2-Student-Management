@@ -161,10 +161,25 @@ body {
     margin-top: 10px;
 }
 h1 {
-    font-size: 3em;
-    font-weight: 900;
-    margin: 15px;
+    font-size: 50px;
     color: #5499C7;
     text-align: center;
     margin-top: 150px;
+    border: 1px solid #fff;
+    width: 70%;
+    margin-left: 150px;
+
+}
+.box{
+    border: 5px solid #fff;
+    color: #5499C7;
+    font-size: 40px;
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 20px;
+    background: white;
+    margin-left: 260px;
+    font-weight: bolder;
 }
