@@ -1,6 +1,4 @@
 <% include ../partials/boilerplate %>
-
-
 <form class="editcard" action="/students" method="POST">
     <h1>Create a student</h1>
     <div class="edit_form">
@@ -11,9 +9,11 @@
         <label for="email">Email</label>
         <input id="email" type="text" name="email" value="" />
     </div>
-    <div class="edit_form">
-        <label for="gender">Gender</label>
-        <input id="gender" type="text" name="gender" value="" />
+    <div class="edit_form radio-group">
+        <input type="radio" id="genderChoice1" name="gender" value="male">
+        <label for="genderChoice1">Male</label>
+        <input type="radio" id="genderChoice2" name="gender" value="female" >
+        <label for="genderChoice2">Female</label>
     </div>
     <div class="edit_form">
         <label for="phone_number">Mobile #</label>
@@ -25,9 +25,5 @@
     <div>
         <a class="link" href="/students">Cancle</a>
     </div>
-
 </form>
-
-
-
 <% include ../partials/end %>

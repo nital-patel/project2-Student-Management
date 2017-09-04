@@ -1,6 +1,4 @@
 <% include ../partials/boilerplate %>
-
-
 <form class="editcard" method="POST" action="<%= `/students/${student.id}?_method=PUT` %>">
     <h1>Edit a student</h1>
     <div class="edit_form">
@@ -15,9 +13,11 @@
           <label  for="email">Email</label>
           <input id="email" type="text" name="email" value="<%= student.email %>" />
     </div>
-    <div class="edit_form">
-          <label  for="gender">Gender</label>
-          <input id="gender" type="radio" name="male" value="male" value="<%= student.gender %>" />
+    <div class="edit_form radio-group">
+        <input type="radio" id="genderChoice1" name="gender" value="male" <%= (student.gender === 'male') ? "checked" : "" %> >
+        <label for="genderChoice1">Male</label>
+        <input type="radio" id="genderChoice2" name="gender" value="female" <%= (student.gender === 'female') ? "checked" : ""%> >
+        <label for="genderChoice2">Female</label>
     </div>
     <div class="edit_form">
           <label  for="phone_number">Mobile #</label>

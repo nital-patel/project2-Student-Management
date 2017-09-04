@@ -25,12 +25,12 @@ const Student = {
     create(student) {
         return db.one(`   
       INSERT INTO student
-        (student_name, email, gender, phone_number)
+        (student_name, email, gender, phone_number, profile_image)
       VALUES 
-        ($1, $2, $3, $4)
+        ($1, $2, $3, $4, $5)
       RETURNING *
     `,
-            [student.student_name, student.email, student.gender, student.phone_number]
+            [student.student_name, student.email, student.gender, student.phone_number, student.profile_image]
         );
     },
     destroy(id) {

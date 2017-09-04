@@ -1,7 +1,4 @@
 <% include ../partials/boilerplate %>
-
-
-
 <form class="editcard" method="POST" action="<%= `/classes/${classData.id}?_method=PUT` %>">
     <h1>Edit a classes</h1>
     <div class="edit_form">
@@ -20,13 +17,12 @@
         <label for="end_date">End_date</label>
         <input id="end_date" type="text" name="end_date" value="<%= classData.end_date %>" />
     </div>
-        <div>
-            <button class="btn">Save</button>
-        </div>
-        <div class="edit_form">
-            <a class="link" href="/classes">Cancle</a>
-        </div>
-
+    <div>
+        <button class="btn">Save</button>
+    </div>
+    <div class="edit_form">
+        <a class="link" href="/classes">Cancle</a>
+    </div>
 </form>
 <% include ../partials/end %>
 

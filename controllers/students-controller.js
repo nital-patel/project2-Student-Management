@@ -60,8 +60,9 @@ studentsController.new = (req, res) => {
 };
 
 studentsController.create = (req, res) => {
-
+    console.log('Profile Image :' + req.body.profile_image);
     Student.create({
+        profile_image: req.body.profile_image,
         student_name: req.body.student_name,
         email: req.body.email,
         gender: req.body.gender,

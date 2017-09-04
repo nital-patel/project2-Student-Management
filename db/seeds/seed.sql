@@ -1,14 +1,12 @@
-INSERT INTO student (id, student_name, email, gender, phone_number) VALUES
+INSERT INTO student (student_name, email, gender, phone_number, profile_image) VALUES
 (
-1,
 'James',
 'james23@gmail.com',
 'male',
 7867435234
 ),
-
+s
 (
-2,
 'nainesh',
 'nil@yahoo.com',
 'male',
@@ -16,7 +14,6 @@ INSERT INTO student (id, student_name, email, gender, phone_number) VALUES
 ),
 
 (
-3,
 'monika',
 'min23@gmail.com',
 'female',
@@ -24,7 +21,6 @@ INSERT INTO student (id, student_name, email, gender, phone_number) VALUES
 ),
 
 (
-4,
 'nikita',
 'nik3@gmail.com',
 'female',
@@ -32,7 +28,6 @@ INSERT INTO student (id, student_name, email, gender, phone_number) VALUES
 ),
 
 (
-5,
 'hiren',
 'heer@outlook.com',
 'male',
@@ -40,10 +35,9 @@ INSERT INTO student (id, student_name, email, gender, phone_number) VALUES
 ),
 
 (
-6,
 'ketan',
 'kit@twitter.com',
 'male',
 7456671233
-);
+)
 
