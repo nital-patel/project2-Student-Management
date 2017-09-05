@@ -9,7 +9,7 @@
         <div class="img"><img src="<%= student.profile_image %>" alt=""></div>
     </div>
     <div class="contain">
-        <span class="edit_form"><%= student.student_name %></span>
+        <span class="edit_form"><a class="link" href="/students/<%= student.id %>"> <%= student.student_name %></a></span>
         <span class="edit_form"><%= student.email %></span>
         <span class="edit_form"><%= student.phone_number %></span>
         <span class="edit_form">

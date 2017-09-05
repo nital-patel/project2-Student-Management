@@ -31,6 +31,24 @@ const Student = {
             [student.student_name, student.email, student.gender, student.phone_number, student.profile_image]
         );
     },
+    findClassesRegistered(id) {
+        return db.query(
+            `SELECT * FROM student_classes
+             WHERE 
+             student_id = ${id}`
+        );
+    },
+    deleteRegisteredClasses(id) {
+        return db.none(`DELETE FROM student_classes WHERE student_id = ${id}`);
+    },
+    registerClass (student_id, class_id) {
+        return db.one(`
+            INSERT INTO student_classes (student_id, class_id)
+            VALUES 
+                ($1, $2)
+            RETURNING *
+        `, [student_id, class_id]);
+    },
     destroy(id) {
         return db.none(
             `    

@@ -16,37 +16,57 @@ studentsController.index = (req,res) => {
 
 };
 
-studentsController.show = (req, res) => {
-    Student.findById(req.params.id)
-        .then(student => {
-            res.render('students/show', { student })
-        })
-        .catch(err => {
-            res.status(500).json(err);
-        });
-};
-
-studentsController.edit = (req, res) => {
-
-    Promise.all([
-        Student.findById(req.params.id),
-        Classes.findAll()
+function findStudentDetails (id) {
+    return Promise.all([
+        Student.findById(id),
+        Classes.findAll(),
+        Student.findClassesRegistered(id)
     ])
         .then(results => {
             const classes = results[1];
-
             const student = results[0];
 
-            res.render ('students/edit', { student, classes });
+            const classesRegistered = results[2].reduce((val, cur) => {
+                return [...val, cur.class_id];
+            }, []);
+
+            return { student, classes, classesRegistered };
+        })
+
+}
+
+studentsController.show = (req, res) => {
+    findStudentDetails(req.params.id)
+        .then((data) => {
+            res.render('students/show', data)
         })
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
         });
+
+
+};
+
+studentsController.edit = (req, res) => {
+    findStudentDetails(req.params.id)
+        .then((data) => {
+            res.render ('students/edit', data);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+
+
 };
 
 studentsController.update = (req, res) => {
-    console.dir(req.body);
+
+    if (!Array.isArray(req.body.classes)) {
+        req.body.classes = (req.body.classes) ? [req.body.classes] : [];
+    }
+
     Student.update({
         id: req.params.id,
         student_name: req.body.student_name,
@@ -54,6 +74,11 @@ studentsController.update = (req, res) => {
         gender: req.body.gender,
         phone_number: req.body.phone_number
     }, req.params.id)
+
+        .then(Student.deleteRegisteredClasses(req.params.id))
+        .then(Promise.all(req.body.classes.map(classRegistered => {
+            return Student.registerClass(req.params.id, classRegistered)
+        })))
         .then(() => {
             res.redirect(`/students/${req.params.id}`)
         })

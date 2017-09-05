@@ -28,7 +28,7 @@
         <legend>Select Classes</legend>
         <% classes.forEach(classData => { %>
         <div>
-            <input type="checkbox" id="<%= "class-" + classData.id %>" name="classes" value="<%= classData.id %>">
+            <input type="checkbox" id="<%= "class-" + classData.id %>" name="classes" value="<%= classData.id %>" <%= classesRegistered.includes(classData.id) ? "checked" : "" %>>
             <label for="<%= "class-" + classData.id %>"><%= classData.name %></label>
         </div>
         <% }) %>

@@ -1,6 +1,9 @@
 <% include ../partials/boilerplate %>
 <div class="editcard">
     <div class="edit_form">
+        <img class="img" src="<%= student.profile_image%>" alt="">
+    </div>
+    <div class="edit_form">
         Student Id: <%=  student.id %>
     </div>
     <div class="edit_form">
@@ -11,6 +14,14 @@
     </div>
     <div class="edit_form">
         Mobile #: <%= student.phone_number%>
+    </div>
+    <div class="edit_form">
+        Classes Registered:
+        <% classes.forEach(classData => { %>
+        <div>
+            <%= classesRegistered.includes(classData.id) ? classData.name : "" %>
+        </div>
+        <% }) %>
     </div>
     <div class="actions">
         <a class="btn"href="/students">Back to Students</a>
