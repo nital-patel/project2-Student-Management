@@ -1,4 +1,4 @@
-INSERT INTO data (name, instructor, start_date, end_date) VALUES
+INSERT INTO class (name, instructor, start_date, end_date) VALUES
 (
 'Micro Economics',
 'Ajay Sir',
